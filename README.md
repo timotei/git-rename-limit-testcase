@@ -1,5 +1,5 @@
 # Git modified files rename bug (on 200+ files)
-It seems that after 200 renamed + modified files (slightly - 95% similarity index), git fails to properly recognize the renames anymore. This was reproduced on version `2.12.0.windows.1` and on Linux with git version 2.1.4.
+It seems that after 200 renamed + modified files (slightly - 95% similarity index), git fails to properly recognize the renames anymore. This was reproduced on version `2.12.0.windows.1` and on Linux with git version 2.1.4. Even with `diff.renameLimit` being set to something like 3000, it still reproduces.
 
 Once you add the 201th renamed file, it will break *everything*, even if you amend the commit.
 
